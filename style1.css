@@ -1,0 +1,294 @@
+#sakura {
+	width: 100%;
+	background-image: url(s3.gif);
+}
+#maket {
+	width:80%;
+	margin:0 auto;
+	position: relative;
+	min-width: 850px;
+	max-width: 1350px;
+}
+table {
+	font-family: Yu Gothic UI Light;
+	color:#ffffff;
+	font-size: 18;
+}
+.text {
+    padding: 30px; 
+	text-align: left;
+    color: #ffffff; 
+	font-size: 22;
+	background: rgba(124, 74, 74, 0.7);
+	}
+.image {
+	background-image: url(b2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+  }
+.image2{
+	background-image: url(back2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+  }
+.image3{
+	background-image: url(back3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+  }
+.image4{
+	background-image: url(back0.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+  }
+  
+h1 {
+	font-size:80px;
+	text-align: center;
+	font-weight: lighter;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #000000;
+   font-family: 17;
+}
+.gradient-text {
+  text-transform: uppercase;
+  background: linear-gradient(60deg, #0B2349 33%, #842020 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+}
+body{
+  margin: 0;
+  font-family: Century Gothic;
+}
+.container{
+  position:absolute;
+  @include center();
+}
+.title{
+  color: transparent;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position:relative;
+  text-align:center;
+  line-height:150px;
+  letter-spacing: -1px;
+}
+.subtitle{
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top:10px;
+}
+
+a:link { 
+    text-decoration: none; 
+}
+h1:hover  {
+	color: transparent;
+  background: url(s1.gif) repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position:relative;
+  text-align:center;
+  line-height:150px;
+  letter-spacing: -1px;
+}
+.menu {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.menu__link {
+	
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  padding: 26px 0;
+  font-family: 'Muli', Yu Gothic UI Light;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.040em;
+}
+
+.menu__link svg { 
+  fill: none;
+  stroke: #B53A3A;
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 338;
+  stroke-dashoffset: 338;
+  stroke-linecap: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 60px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: stroke-dashoffset 0s 0.6s, opacity 0.7s;
+  z-index: -2;
+}
+
+.menu__link--active svg {
+  stroke: #B53A3A;
+  stroke-width: 2;
+}
+
+.menu__link--active svg,
+.menu__link:hover svg {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s, stroke-dashoffset 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+a:hover {
+	color:#E5BABA;
+	text-decoration: underline;	
+}
+li {
+	display: inline;
+	font-size: 40;
+	margin-left: 9%;
+	font-family: Yu Gothic UI Light;
+	float: left;	
+}
+p {
+    text-indent: 30px; 
+	font-family: Yu Gothic UI Light;
+}
+.cssSlider {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.cssSlider .slides {
+	overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 90%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-left: 0%;
+	
+}
+.cssSlider .slides > li {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin: 0;
+	
+	
+}
+.cssSlider .slides > li > img {
+	width: 100%;
+	height: 100%;
+}
+.cssSlider .slides > li:first-child:not(:target) {
+	z-index: 1;
+	-webkit-transform: translateY(0%);
+	        transform: translateY(0%);
+}
+
+.cssSlider .thumbnails {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+}
+.cssSlider .thumbnails > li {
+	float: left;
+	margin-top: 16px;
+	margin-left: 16px;
+	margin-right: 0;
+}
+.cssSlider .thumbnails > li > a {
+	display: block;
+}
+.cssSlider .thumbnails > li > a > img {
+	width: 100%;
+	height: 20%;
+	max-width: 150px;
+}
+
+.cssSlider .slides li:target {
+	z-index: 3;
+	-webkit-animation: slide 1s 1;
+}
+.cssSlider .slides li:not(:target) {
+	-webkit-animation: hidden 1s 1;
+}
+@-webkit-keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@-webkit-keyframes hidden {
+	0% {
+		z-index: 3;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 3;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+@keyframes hidden {
+	0% {
+		z-index: 3;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 3;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+
+body {
+  margin: 0;
+}
+main {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textback {
+  background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+  background-size: contain;
+  background-position: top left;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 50;
+  font-weight: bold;
+  font-family: Yu Gothic UI Light;
+}
+a { color: inherit; } 
+a:hover { color: inherit; } 
